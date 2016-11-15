@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectBlogRuby</title>
+    <title><%= yield(:title) %> | Page</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,22 @@
   </head>
 
   <body>
+	<div class="header">
+		<div class="content">
+			<a href="/" class="button-header">Home</a>
+			<div class="dropdown">
+				<a class="button-header dropbtn" onclick="myFunction()">Table</a>
+				<div id="myDropdown" class="dropdown-content">
+					<a href="#">Link 1</a>
+					<a href="#">Link 2</a>
+					<a href="#">Link 3</a>
+				</div>
+			</div>
+		</div>
+	</div>
     <%= yield %>
+    <div class="footer">
+		COPYRIGHT © 2016 CODEDOCT.COM ALL RIGHTS RESERVED.
+	</div>
   </body>
 </html>
