@@ -1,5 +1,28 @@
 <%= provide(:title, "User") %>
-<div class="test">hai</div>
-<% @nama.each do |x| %>
-	<h4><%= x %></h4>
-<% end %>
+<h1>Table user</h1>
+<br>
+<table border="1px" width="100%">
+	<thead>
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Nick Name</th>
+			<th>Address</th>
+			<th>Phone number</th>
+			<th>Birthdate</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% no=1; @users.each do |x| %>
+		<% if !x.first_name then x.first_name='' end; if !x.last_name then x.last_name='' end %>
+			<tr>
+				<td><%= no %></td>
+				<td><%= x.first_name+' '+x.last_name %></td>
+				<td><%= x.nick_name %></td>
+				<td><%= x.address %></td>
+				<td><%= x.phone %></td>
+				<td><%= x.birth_date %></td>
+			</tr>
+		<% no+=1; end %>
+	</tbody>
+</table>

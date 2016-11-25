@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   # root 'application#hello'
   get 'users' => 'users#index'
   get '' => 'home#index'
+  get 'signup' => 'users#_signup'
+  post 'signup' => 'users#_addUser'
 end
