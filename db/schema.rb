@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 20161120043957) do
     t.string   "nick_name"
     t.text     "address"
     t.integer  "phone"
+    t.string   "email"
+    t.string   "password_digest"
     t.date     "birth_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

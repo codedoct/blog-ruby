@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'signup' => 'users#_signup'
   post 'signup' => 'users#_addUser'
 
+  get 'login' => 'session#index'
+  post 'login' => 'session#create'
+
   get 'edit/:id' => 'users#_show', as: :user
   post 'edit/:id' => 'users#_edit'
 

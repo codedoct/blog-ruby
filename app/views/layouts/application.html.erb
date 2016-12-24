@@ -23,7 +23,11 @@
 				</div>	
 			</div>
 			<div class="right-float">
-				<a href="/signup" class="button-header">SignUp</a>
+				<% if current_user %>
+					<a href="/" class="button-header"><%= current_user.email %></a>
+				<% else %>
+					<a href="/login" class="button-header">Login</a>
+				<% end %>
 			</div>
 		</div>
 	</div>

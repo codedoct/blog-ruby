@@ -13,6 +13,8 @@
 	  	<%= f.text_area :address, :value => @user.address, class: 'form-input-textarea', required: true %><br>
 	  	<label>Phone</label>
 	  	<%= f.number_field :phone, :value => @user.phone, class: 'form-input', required: true %><br>
+	  	<%= f.email_field :email, :value => @user.email, class: 'form-input', required: true %><br>
+	  	<%= f.password_field :password, :value => @user.password, class: 'form-input', required: true %><br>
 		<%= f.submit "Save", class: "btn-submit" %>  <input type="button" onclick="location.href='/users';" value="Cancel" class="btn-submit" />
 	<% end %>
 </div>

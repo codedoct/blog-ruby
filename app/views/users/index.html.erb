@@ -9,6 +9,7 @@
 			<th>Nick Name</th>
 			<th>Address</th>
 			<th>Phone number</th>
+			<th>Email</th>
 			<th>Birthdate</th>
 			<th>Action</th>
 		</tr>
@@ -22,6 +23,7 @@
 				<td><%= x.nick_name %></td>
 				<td><%= x.address %></td>
 				<td><%= x.phone %></td>
+				<td><%= x.email %></td>
 				<td><%= x.birth_date %></td>
 				<td><%= link_to "Edit", user_path(x) %> || <%= link_to 'Delete',  { action: :_delete, id: x.id }, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
